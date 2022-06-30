@@ -1,0 +1,297 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --font-twenty: 1.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  background-image: url("images/bg-pattern-top-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  min-height: 25rem;
+  height: auto;
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title-container {
+  width: 50%;
+  min-width: 31.25rem;
+  height: auto;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.title-container h1 {
+  color: var(--very-dark-magenta);
+  font-size: 3.75rem;
+  min-width: 18.75rem;
+  width: 25rem;
+  margin-bottom: 0.625rem;
+}
+
+.title-container p {
+  color: hsl(303, 10%, 53%);
+  font-size: var(--font-twenty);
+
+  /* min-width: 400px; */
+
+  width: 31.25rem;
+  margin-top: 0.625rem;
+  line-height: 1.5625rem;
+}
+
+.stars-container {
+  width: 50%;
+  min-width: 25rem;
+
+  /* flex */
+  flex-flow: column wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars-container .stars {
+  background: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 25.625rem;
+  height: 3.125rem;
+  margin-bottom: 0.9375rem;
+  border-radius: 0.3125rem;
+
+  /* flex */
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars span {
+  margin-left: 0.625rem;
+}
+
+.stars-container .stars1 {
+  align-self: flex-start;
+}
+
+.stars-container .stars2 {
+  align-self: center;
+}
+
+.stars-container .stars3 {
+  align-self: flex-end;
+}
+
+.cards-container {
+  min-height: 320px;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background: hsl(300, 43%, 22%);
+  color: hsl(0, 0%, 100%);
+  width: 350px;
+  min-width: 250;
+  height: 235px;
+  border-radius: 10px;
+  /* flex-grow: 1; */
+  display: flex;
+
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 280px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.card-title .verified {
+  color: hsl(333, 80%, 67%);
+}
+
+.card p {
+  width: 280px;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.card-header img {
+  width: 50px;
+  border-radius: 25px;
+}
+
+.card-header .card-title {
+  align-self: center;
+  position: absolute;
+  left: 4.375rem;
+}
+
+.cards-container .card1 {
+  align-self: flex-start;
+}
+
+.cards-container .card2 {
+  align-self: center;
+}
+
+.cards-container .card3 {
+  align-self: flex-end;
+}
+
+/* Media query */
+
+@media screen and (max-width: 1330px) {
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    margin: 10px 10px;
+  }
+
+  .cards-container .card2 {
+    align-self: flex-start;
+  }
+
+  .cards-container .card3 {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .title-container {
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .title-container h1 {
+    text-align: center;
+  }
+
+  .title-container p {
+    text-align: center;
+    width: 410px;
+    margin-top: 30px;
+  }
+
+  .stars-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stars-container .stars {
+    width: 410px;
+    height: 80px;
+  }
+
+  .stars-container .stars1 {
+    align-self: center;
+  }
+
+  .stars-container .stars2 {
+    align-self: center;
+  }
+
+  .stars-container .stars3 {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .title-container h1 {
+    text-align: center;
+  }
+
+  .title-container p {
+    text-align: center;
+  }
+
+  .cards-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card p {
+    width: 300px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+
+    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-container {
+    align-items: center;
+    width: 400px;
+  }
+
+  .title-container h1 {
+    width: 350px;
+    min-width: 250px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+
+
+  .title-container p {
+    width: 350px;
+    min-width: 300;
+  }
+
+  .stars-container .stars {
+    width: 328px;
+    height: 75px;
+  }
+
+  .stars span {
+    margin: 0 20px;
+  }
+
+  .card {
+    width: 330px;
+    height: 254px;
+  }
+}
